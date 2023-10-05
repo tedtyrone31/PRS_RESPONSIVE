@@ -1,0 +1,758 @@
+@charset "utf-8";
+/*
+サイト上の構成の大枠としてページ内に1度しか出てこないものと、グリッドレイアウトについてを記述します。
+We will write about thing the only comes out once on the page as a frame and grid(column) layout.
+
+接頭辞はLayoutの頭文字を取って【l_】とします。
+Prefix will take the "Layout" first letter and use it as "l_".
+
+ここで指定するのは以下の様なものと予想されます。
+You might use the following.
+.l_wrap/.l_container/.l_header/
+.l_nav/.l_main/.l_contents/.l_footer
+
+モディファイヤを使用する場合は接頭辞【has_】をつけ、各レイアウトの下に記述します。
+When using modifier put the prefix "has_" and write it under each layout.
+
+フォントサイズはremで指定します。
+"rem" will be used for font-size.
+*/
+/*----------------------------------------------
+	.l_wrap
+---------------------------------------------*/
+.l_wrap {
+  /* width: 1000px; */
+  margin: 0 auto;
+}
+
+/*----------------------------------------------
+	.l_bg
+---------------------------------------------*/
+.l_bg {
+  background: url(../images/images/main_bg.jpg) no-repeat, #eee;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+/*----------------------------------------------
+	.l_container
+---------------------------------------------*/
+.l_container {
+  /* padding-top: 40px; */
+  /* padding-bottom: 40px; */
+}
+
+/*----------------------------------------------
+	.l_header
+---------------------------------------------*/
+.l_header_area {
+  background: url(../images/header_bg.png) no-repeat, #ddd;
+  height: 100px;
+}
+.l_header {
+  position: relative;
+}
+.l_header img {
+  position: absolute;
+}
+.l_header_title {
+  top: 20px;
+}
+.l_header_detail {
+  top: 20px;
+  right: 0;
+}
+
+/*----------------------------------------------
+	.l_side_contents
+---------------------------------------------*/
+.l_side_contents {
+  width: 12%;
+  float: left;
+}
+
+/*----------------------------------------------
+	.l_nav_area
+---------------------------------------------*/
+.l_nav_area {
+  background-image: url("../images/images/nav_bg1.png");
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  /* position: fixed; */
+}
+/*----------------------------------------------
+	.l_main_contents
+---------------------------------------------*/
+.l_main_contents {
+  width: 83%;
+  margin: 2% 2.5% 2% 2.5%;
+  position: relative;
+  float: right;
+}
+/*----------------------------------------------
+	.l_poster_area
+---------------------------------------------*/
+.l_poster_area {
+  /* min-height: 91vh; */
+  position: relative;
+  /* background: url(../images/poster_bg.png), #ddd; */
+  background: #f8f0e5;
+  padding-bottom: 1vw;
+  border-radius: 10px;
+}
+/*----------------------------------------------
+	.l_poster_ttl
+---------------------------------------------*/
+.l_poster_header {
+  position: absolute;
+  top: 92px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+/*----------------------------------------------
+	.l_poster_details
+---------------------------------------------*/
+.l_poster_detail {
+  position: absolute;
+  top: 180px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+/*----------------------------------------------
+	.l_poster_date
+---------------------------------------------*/
+.l_poster_date {
+  position: absolute;
+  bottom: 150px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+/*----------------------------------------------
+	.l_news_area
+---------------------------------------------*/
+.l_news_area {
+  background: #ddd;
+  overflow: hidden;
+}
+
+/*----------------------------------------------
+  .l_news_header
+	---------------------------------------------*/
+.l_news_header {
+  font-size: 2rem;
+  color: #000;
+  position: relative;
+  border-bottom: 1px solid #dadfe7;
+  background: url(../images/news_header_bg.png), #ccc;
+  padding-left: 20px;
+  padding: 10px 20px;
+  font-weight: bold;
+}
+/*.l_news_header:before {
+	content: "";
+	width: 7px;
+	height: 11px;
+	background: url(../images/news_header_arrow.png) no-repeat;
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	margin: auto;
+	left: 20px;
+}*/
+
+/*----------------------------------------------
+  .l_content
+---------------------------------------------*/
+.l_content {
+  background: #fff;
+  padding: 25px;
+  min-height: 600px;
+}
+
+/*----------------------------------------------
+  .l_link_content
+---------------------------------------------*/
+.l_link_content p {
+  border-bottom: 2px dotted #385173;
+  padding: 20px 0px;
+}
+/*----------------------------------------------
+  .l_footer_area
+---------------------------------------------*/
+.l_footer_area {
+  position: relative;
+  background: #ddd;
+  color: #000;
+  padding: 20px 0;
+}
+
+/*----------------------------------------------
+  .l_contact_area
+---------------------------------------------*/
+.l_contact_area {
+  padding-bottom: 0px;
+}
+
+/*----------------------------------------------
+  .l_copyright
+---------------------------------------------*/
+.l_copyright {
+  border-top: 1px solid #666;
+  padding: 10px;
+  font-size: 1.3rem;
+  background: #fff;
+}
+
+/*----------------------------------------------
+  .l_pagetop
+---------------------------------------------*/
+.l_pagetop {
+  position: fixed;
+  right: 25px;
+  bottom: 50px;
+  z-index: 99;
+}
+.l_pagetop a {
+  line-height: 0;
+  display: block;
+}
+.l_pagetop img:hover {
+  opacity: 0.9;
+}
+/*----------------------------------------------
+  .l_double
+---------------------------------------------*/
+.l_double > div {
+  width: 49%;
+  display: inline-block;
+}
+.l_double:nth-child(1) {
+  margin-left: 0;
+}
+.l_double:nth-child(2) {
+  margin-right: 0;
+}
+
+/*----------------------------------------------
+  .l_double
+---------------------------------------------*/
+.l_double02 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.l_double02 > * {
+  width: 49% !important;
+}
+
+/*ここから下は触らない　Do not touch from here*/
+/*----------------------------------------------
+	.l_column_warp
+---------------------------------------------*/
+/*
+コラムの使い方の説明
+How to use column
+
+コラムはサイト上の構成の大枠としては使用せず、コンテンツエリア内で使用してください。
+Do not use the column as the frame but, use it inside the contents area.
+
+HTMLは以下の形が基本形です。
+The following will be the base for HTML.
+----------------------------------------------
+<div class="l_column_wrap">
+	<div class="l_column has_column_pc00unit has_column_sp00unit">
+		コンテンツが入る
+	</div>
+</div>
+----------------------------------------------
+
+
+00部分はコンテンツ幅を12分割した値が入ります。
+In the "00" part will have the values 1 to 12.
+The values are from dividing the content width into 12.
+
+以下のclassをl_columnに追加する事で、コラムの分割数をPC/SPそれぞれに設定する事ができます。
+By adding the following class into "l_column", you can set the column's number of partitions on the PC and SP.
+
+下記はPCの場合の例です。
+Example for PC
+has_column_pc1unit : 12分割 12 partition
+has_column_pc2unit : 6分割
+has_column_pc3unit : 4分割
+has_column_pc4unit : 3分割
+has_column_pc5unit : 5/12分割
+has_column_pc6unit : 2分割
+has_column_pc7unit : 7/12分割
+has_column_pc8unit : 2/3分割
+has_column_pc9unit : 3/4分割
+has_column_pc10unit : 5/6分割
+has_column_pc11unit : 11/12分割
+has_column_pc12unit : 1分割
+
+以下のclassをl_columnに追加する事で、コラムの左右余白を設定する事ができます。
+By adding the following class into "l_column", you can set the padding.
+
+has_column_padding10 : 左右5px
+has_column_padding20 : 左右10px
+has_column_padding30 : 左右15px
+has_column_padding40 : 左右20px
+has_column_padding50 : 左右25px
+
+以下のclassをl_column_wrapに追加する事で、両端の余白を調整する事ができます。
+By adding the following class into "l_column_wrap", you can adjust the padding.
+
+has_column_wrap_fill10 : 左右5pxづつ埋める
+has_column_wrap_fill20 : 左右10pxづつ埋める
+has_column_wrap_fill30 : 左右15pxづつ埋める
+has_column_wrap_fill40 : 左右20pxづつ埋める
+has_column_wrap_fill50 : 左右25pxづつ埋める
+*/
+
+/* .l_column unit */
+.l_column {
+  box-sizing: border-box; /* border-widthとpaddingをwidthに含める　Include border-width and padding into width. */
+  float: left;
+}
+.l_column.has_column_pc1unit {
+  width: 8.33%;
+}
+.l_column.has_column_pc2unit {
+  width: 16.66%;
+}
+.l_column.has_column_pc3unit {
+  width: 25%;
+}
+.l_column.has_column_pc4unit {
+  width: 33.32%;
+}
+.l_column.has_column_pc5unit {
+  width: 41.65%;
+}
+.l_column.has_column_pc6unit {
+  width: 50%;
+}
+.l_column.has_column_pc7unit {
+  width: 58.33%;
+}
+.l_column.has_column_pc8unit {
+  width: 66.66%;
+}
+.l_column.has_column_pc9unit {
+  width: 74.99%;
+}
+.l_column.has_column_pc10unit {
+  width: 83.32%;
+}
+.l_column.has_column_pc11unit {
+  width: 91.65%;
+}
+.l_column.has_column_pc12unit {
+  width: 100%;
+}
+
+@media screen and (max-width: 640px) {
+  .l_column.has_column_sp1unit {
+    width: 8.33%;
+  }
+  .l_column.has_column_sp2unit {
+    width: 16.66%;
+  }
+  .l_column.has_column_sp3unit {
+    width: 25%;
+  }
+  .l_column.has_column_sp4unit {
+    width: 33.32%;
+  }
+  .l_column.has_column_sp5unit {
+    width: 41.65%;
+  }
+  .l_column.has_column_sp6unit {
+    width: 50%;
+  }
+  .l_column.has_column_sp7unit {
+    width: 58.33%;
+  }
+  .l_column.has_column_sp8unit {
+    width: 66.66%;
+  }
+  .l_column.has_column_sp9unit {
+    width: 74.99%;
+  }
+  .l_column.has_column_sp10unit {
+    width: 83.32%;
+  }
+  .l_column.has_column_sp11unit {
+    width: 91.65%;
+  }
+  .l_column.has_column_sp12unit {
+    width: 100%;
+  }
+}
+
+/* column padding */
+.l_column.has_column_padding10 {
+  padding: 0 5px;
+}
+.l_column.has_column_padding20 {
+  padding: 0 10px;
+}
+.l_column.has_column_padding30 {
+  padding: 0 15px;
+}
+.l_column.has_column_padding40 {
+  padding: 0 20px;
+}
+.l_column.has_column_padding50 {
+  padding: 0 25px;
+}
+
+/* column fill */
+.l_column_wrap.has_column_wrap_fill10 {
+  margin: 0 -5px;
+}
+.l_column_wrap.has_column_wrap_fill20 {
+  margin: 0 -10px;
+}
+.l_column_wrap.has_column_wrap_fill30 {
+  margin: 0 -15px;
+}
+.l_column_wrap.has_column_wrap_fill40 {
+  margin: 0 -20px;
+}
+.l_column_wrap.has_column_wrap_fill50 {
+  margin: 0 -25px;
+}
+
+.l_right_content_inside_bg {
+  background-image: url("../images/images/right_content_bg.png");
+  /* min-height: 630px; */
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 30px;
+  border-radius: 5px;
+  position: relative;
+  padding-bottom: 2vw;
+}
+
+.l_right_content_inside_bg.bg_none {
+  background-image: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.l_search_bar_container {
+  position: relative;
+  display: inline-block;
+}
+
+.c_search {
+  background-color: #965eca;
+  margin-left: 1vw;
+  margin-right: 3vw;
+  width: 100%;
+  border: none;
+  color: #fff;
+  font-family: "Courier New", Courier, monospace;
+  padding: 10px 20px !important;
+  outline: none;
+
+  border-radius: 20px;
+}
+
+.search_btn {
+  /* height: 2vw; */
+  /* height: 100%; */
+  width: 30px; /* Adjust the width of the button as needed */
+  background: url(../images/images/search.png) no-repeat center center;
+  border: none;
+  cursor: pointer;
+  background-size: contain;
+  height: 17px;
+  border: none;
+  position: absolute;
+  margin-left: 0.3vw;
+}
+
+.l_main_search_container {
+  display: flex;
+  align-items: center;
+  background-color: #965eca;
+  border: 2px solid #fff;
+  border-radius: 20px;
+  /* padding: 10px 20px !important; */
+  /* padding: 0.5vw; */
+  outline: none;
+}
+
+.l_poster_area_login {
+  min-height: 91vh;
+  position: relative;
+  /* background: url(../images/poster_bg.png), #ddd; */
+  /* background: #f8f0e5; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: red; */
+}
+
+.l_login_form {
+  background-color: #f8f0e5;
+  /* height: 20vw; */
+  padding: 2vw 0 1vw 0;
+}
+
+.l_login_form_container {
+  width: 35vw;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.l_login_form_input_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.l_login_form_input_container input {
+  margin-bottom: 1vw;
+  text-align: center;
+  letter-spacing: 2px;
+  padding: 0.5vw 2vw 0.5vw 2vw;
+}
+
+.l_login_form_input_container div:not(:last-of-type) input {
+  border-radius: 5px;
+  border: none;
+  /* font-style: italic; */
+  /* font-weight: bold; */
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  font-weight: bold;
+  user-select: none;
+}
+
+.l_login_form_input_container div {
+  user-select: none;
+}
+
+.l_pagination_list {
+  display: flex;
+}
+
+.l_pagination_list li {
+  margin-right: 10px;
+  list-style-type: none;
+  user-select: none;
+}
+.l_pagination_list li a {
+  /* font-size: 16px; */
+  text-decoration: none;
+  padding: 5px 15px;
+  background-color: #aec3ae;
+  /* border-radius: 50%; */
+  color: #373b3e;
+  /* color: #894dc6; */
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.l_pagination_list li a:hover,
+.l_pagination_list li a.active {
+  background-color: #fbc10e;
+  color: #fff;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px #000, 3px 3px 5px blue;
+  /* color: #894dc6; */
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.l_pagination_main_container {
+  /* position: absolute; */
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+  /* padding-bottom: 2vw; */
+  /* bottom: 1.5vw; */
+}
+
+.l_show_pages {
+  color: #894dc6;
+  user-select: none;
+  /* font-size: larger; */
+}
+
+.l_pagination {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.l_card {
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  border-radius: 10px;
+}
+.l_info_container label {
+  font-size: 18px;
+  padding: 5px 15px;
+}
+
+.l_info_container {
+  background-image: url(../images/images/right_content_bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* min-width: 550px; */
+  /* min-width: 30vw; */
+  /* padding: 20px 10px; */
+  flex-direction: column;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  user-select: none;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  padding: 1vw;
+}
+.l_info_container textarea,
+.l_info_container select,
+.l_info_container input {
+  /* width: 400px; */
+  /* min-width: 8vw; */
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  padding: 5px 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.l_add_record_form {
+  width: 100%;
+}
+
+.modal_background {
+  /* display: none; */
+  position: fixed;
+  z-index: 1;
+  /* padding-top: 100px; */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+#patient_info .l_card {
+  position: relative;
+}
+
+#patient_info .l_card,
+#edit .l_card {
+  width: 70%;
+  z-index: 99;
+}
+
+#edit .l_main_contents {
+  display: flex;
+  justify-content: center;
+}
+
+.l_edit_form {
+  width: 100%;
+}
+
+.l_prompt_container_medical_rec,
+.l_prompt_container_personal_info {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffff;
+  width: 400px;
+  height: 200px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 2;
+  position: fixed;
+  top: 40%;
+  left: 40%;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  /* font-weight: bold; */
+  visibility: hidden;
+}
+
+.l_prompt_container_personal_info.show,
+.l_prompt_container_medical_rec.show {
+  visibility: visible;
+}
+
+#edit .l_right_content_container {
+  /* z-index: 1; */
+}
+
+#patient_info .l_prompt_container_delete_warning {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffff;
+  width: 400px;
+  height: 200px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 3;
+  position: fixed;
+  top: 40%;
+  left: 40%;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  /* font-weight: bold; */
+  visibility: hidden;
+}
+
+#patient_info .l_prompt_container_delete_warning.show {
+  visibility: visible;
+}
+
+#patient_info .l_info_container_main_container {
+  display: flex;
+  justify-content: space-between;
+}
+
+#patient_info .l_main_contents {
+  margin: unset !important;
+  width: 100%;
+  padding: 3vw;
+}
+#patient_info .l_card {
+  width: 100%;
+}
+
+#patient_info .l_info_container_main_container > div:nth-child(1) {
+  width: 38.2%;
+}
+#patient_info .l_info_container_main_container > div:nth-child(2) {
+  width: 38.5%;
+}
+#patient_info .l_info_container_main_container > div:nth-child(3) {
+  width: 22%;
+}
+
+.l_table_container {
+  overflow: auto;
+  white-space: nowrap;
+  padding: 20px 0;
+}
+
+#patient_info .l_poster_area {
+  padding: unset !important;
+}
+
+#patient_info .l_printer_btn_container {
+  display: flex;
+  margin-top: 1vw;
+  justify-content: flex-end;
+}

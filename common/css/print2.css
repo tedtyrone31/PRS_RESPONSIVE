@@ -1,0 +1,228 @@
+/* .body {
+  min-width: 1000px;
+} */
+
+.l_wrapper {
+  width: 970px;
+  margin: 30px auto 150px auto;
+}
+
+.header_container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.physician_main_container,
+.print_date {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 100px;
+}
+
+/* .print_date input {
+  border: none !important;
+} */
+
+.print_address {
+  /* width: 630px !important; */
+  /* width: 500px !important; */
+  text-align: center !important;
+}
+
+.print_name {
+  /* width: 400px !important; */
+  text-align: center !important;
+}
+
+.print_gender,
+.print_age {
+  /* width: 100px !important; */
+  text-align: center !important;
+}
+.print_findings {
+  /* width: 300px !important; */
+}
+
+.physician_container,
+.date_container input,
+.date_container {
+  text-align: center;
+  margin-bottom: 2px;
+  text-align: center !important;
+}
+
+.date_container input {
+  padding-bottom: 2px;
+}
+
+.physician_container input,
+.date_container input {
+  border: none;
+  border-bottom: 1px solid #000;
+}
+
+.para_container {
+  display: block;
+  padding: 0 30px;
+  letter-spacing: 1px;
+}
+
+.para_container > * {
+  margin-right: 5px;
+  margin-bottom: 3px;
+  letter-spacing: 1px;
+}
+
+.para_container p {
+  display: inline-block;
+}
+.license_field input,
+.para_container input {
+  width: 200px;
+  border: none;
+  border-bottom: 1px solid #000;
+  text-align: left;
+  text-indent: 0.5vw;
+}
+
+.physician_container > * {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.physician_main_container_ {
+  margin-top: 30px;
+}
+
+.physician_container input {
+  width: 455px;
+}
+.license_field {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+
+.license_field > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.pronoun,
+.contraction {
+  /* width: 60px !important; */
+  text-align: center !important;
+}
+
+.print_date_period {
+  /* width: 300px !important; */
+  /* width: 275px !important; */
+  text-align: center !important;
+}
+.physical_exam_main_container {
+  display: flex;
+  margin-bottom: 3px;
+  letter-spacing: 2px;
+  align-items: center;
+}
+
+.physical_exam_main_container div {
+  display: flex;
+  flex-direction: row;
+}
+
+.physical_exam_main_container input {
+  border: none;
+  border-bottom: 1px solid black;
+  margin-left: 5px;
+  text-align: center;
+  margin-right: 10px;
+  width: 150px;
+}
+
+.print_blood_pressure {
+  /* width: 190px !important; */
+}
+
+.print_other_remarks {
+  min-width: 712px;
+  max-width: auto;
+  text-align: left !important;
+  padding-left: 10px !important;
+}
+
+.res input {
+  width: 291px;
+}
+
+.dr_input {
+}
+
+h4 {
+  font-size: 20px;
+}
+
+p {
+  font-size: 18px;
+}
+input {
+  font-size: 18px;
+}
+textarea {
+  font-size: 18px;
+}
+
+.c_indent30 {
+  text-indent: 50px;
+}
+.print2 .print_findings,
+.print_prescription,
+.print_recommendation {
+  border: none;
+  outline: none;
+  width: 100%;
+}
+
+.vitals_container {
+  /* width: 100%; */
+}
+
+.vitals_container div {
+  display: flex;
+  flex-direction: row;
+  /* width: 15vw !important; */
+  margin-bottom: 0.5vw;
+}
+.vitals_container p {
+  white-space: nowrap;
+}
+
+.vitals_container input {
+  border: none;
+  /* text-decoration: underline; */
+  border-bottom: 1px solid #000;
+  /* width: 100%; */
+  width: 15vw !important;
+}
+
+input,
+textarea {
+  font-style: italic !important;
+}
+
+.date_container input,
+.physician_container input,
+.license_field input {
+  font-style: normal !important;
+}
+
+.print2 .license_field {
+  display: flex;
+  justify-content: flex-end;
+  text-align: center !important;
+  align-items: flex-end;
+}
+
+.print2 .l_wrapper {
+}
