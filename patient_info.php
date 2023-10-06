@@ -63,6 +63,7 @@
         // WHERE medical_record_id = $view_history_id";
         
 
+        // TODO:: use parepared statement wtf!
         $query = "SELECT personal_info.*, medical_record.*
         FROM personal_info
         INNER JOIN medical_record ON personal_info.id = medical_record.id

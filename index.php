@@ -383,6 +383,7 @@ $total_no_of_pages = ceil($total_records / $total_records_per_page);
                                             <button class="c_btn_type01 c_btn_add_record_btn" name="add_record_btn">Save</button>
                                         </form>
                                         <?php 
+                                        // TODO:: wtf is this shit! DRY??
                                     if (isset($_POST['add_record_btn'])) {
                                         $firstName = $_POST['firstName'];
                                         $lastName = $_POST['lastName'];
@@ -475,4 +476,27 @@ $total_no_of_pages = ceil($total_records / $total_records_per_page);
 	
 <?php 
 include "footer.php"; 
+
+// OVERALL
+// TODO:: use datatable is a must for backend developer!
+// TODO:: do not use the upload button on github, wtF?, use git commit and commit each task separete not bulk hard to Q.A
+// TODO:: use prepared statement to avoid sql injection.
+// TODO:: DRY??, soo many repetitive specially the CRUD
+// TODO:: create a class for Connection and add your credential, and different class, example create a class for Patient, and the column in your database is your properties
+// TODO:: try to use composer for PHP do not reinvent everything that already exist
+// TODO:: try use any type of ORM wither doctrine or etc. do not try to reinvent if it's already exist, it's like making a computer but making your own graphics cards and other components by yourself.
+// TODO:: if you dont want to use Framework at least learn the basic of MVC, or VC. Separate your logics(aka backend code) in your view files. 
+// TODO:: GIT is a must!!! do not us the upload button on github who does that shit!, separate your main branch(master) to dev branch. at least use 2 difference branch for easy reviewing code before merging, you can name your temporary branch dev or the name of the task. because when you are already working 1 project have multiple programmers or dozen not only you and you will work at the same time that's why pull and push for different functionalities to implement and review code. not 1 giant bullk code.
+// TODO:: GIT: do not commit all at once, code tester are not robots. push it by functionalities(ex if u are using agile). example. 1. displaying records of patines. 2. adding backend logic for create. 3. fix SQL query and use prepared statement to avoid SQL injections and ETC.
+// TODO:: learn at least basic MVC framework.
+// TODO:: try to learn how to install basic laravel or composer package, because naay interview na hands pa installon kag package. example Laravel Voyager/Backpack.
+// TODO:: last but not the least learn how to create VPS on any linux flavors and learn the basics commands. (Apache/Nginx)
+
+// TODO:: IMPORTANT again!
+         // 1. Version control(GIT)
+         // 2. MVC
+         // 3. Composer
+         // 4. basic server mangements(linux flavors ex. ubunt/mint etc.)
+
+// TODO:: once you do all the task above at least the basics, pwede na siguro fresh graduate developer ma hire na. you dont need to know everything just need to learn the basics and have idea. actually daghan pana kay backend man. pero okay na siguro ng ge list naku.
 ?>

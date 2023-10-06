@@ -39,6 +39,8 @@
                         
 
                         if (!empty($id)) {
+                            // TODO:: use prepared statements to avoid sql injection
+                            // TODO:: separate to different class and instantiate or create and object if you want to edit, do the same thing for others C.R.U.D
                             $query = "SELECT personal_info.*, medical_record.*
                             FROM personal_info
                             LEFT JOIN medical_record ON personal_info.id = medical_record.id
@@ -317,7 +319,7 @@
 						<dd>sample sample sample sample sample</dd>
 						<dt>2019.00.00</dt>
 						<dd>sample sample sample sample sample</dd>
-						<dt>2019.00.00</dt>
+			    		<dt>2019.00.00</dt>
 						<dd>sample sample sample sample sample</dd>
 						<dt>2019.00.00</dt>
 						<dd>sample sample sample sample sample</dd>
@@ -337,4 +339,6 @@
 	
 <?php 
 include "footer.php"; 
+
+// TODO:: use TABS instead of spacebar when indenting your code, to see press ALT + A (period means spacebar or copy code, --> arrow = tab), naay uban teamleader stricto kaayo maka Q.A murag shit!
 ?>

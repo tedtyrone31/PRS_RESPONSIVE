@@ -7,6 +7,7 @@
 
         if (isset($_SESSION['session_id'])) {
             $id = $_SESSION['session_id'];
+            // TODO:: use prepared statement to avoid SQL injection
             $query = "SELECT * FROM admin WHERE session_id = '$id' limit 1";
 
             $result = mysqli_query($connection,$query);
@@ -25,9 +26,11 @@
 // --------------------------------------------------------------------------
 // DISPLAY SEARCH LASTNAME
 
+// <!-- TODO:: practice using datatable  -->
 function displaySearchRecord() {
     global $connection,$search;
 
+    // TODO:: use prepared statement to avoid SQL injection
     $query = "SELECT personal_info.*, medical_record.* FROM personal_info 
     LEFT JOIN medical_record ON personal_info.id = medical_record.id 
     WHERE lastName LIKE '%$search%' ORDER BY medical_record.id DESC";
@@ -109,6 +112,7 @@ function noResultFound ($search) {
 function displayRecord() {
     global $connection,$offset,$total_records_per_page;
 
+    // TODO:: use prepared statement to avoid SQL injection
     $query = "SELECT
     -- personal_info.id,
     -- personal_info.lastName,
@@ -346,7 +350,8 @@ function addRecord() {
     date_default_timezone_set('Asia/Manila');
     $timestamp = time();
     $am_pm = date('a', $timestamp);
- 
+    
+    // TODO:: use prepared statement to avoid SQL injection
      $query = "INSERT INTO personal_info  (
         firstName,
         lastName,
@@ -379,7 +384,8 @@ function addRecord() {
         $patientID = mysqli_insert_id($connection);
         // $checked_up_date = date("Y-m-d");
         $checked_up_time = getCurrentTime();
-                                        
+        
+        // TODO:: use prepared statement to avoid SQL injection
         $medicalRecordQuery = "INSERT INTO medical_record (
             id,
             height,
@@ -581,7 +587,8 @@ function addRecord() {
             date_default_timezone_set('Asia/Manila');
             $timestamp = time();
             $am_pm = date('a', $timestamp);
-                                        
+            
+            // TODO:: use prepared statement to avoid SQL injection
             $medicalRecordQuery = "INSERT INTO medical_record (
                 id,
                 height,

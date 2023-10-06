@@ -77,7 +77,8 @@ $result = mysqli_query($connection,$query);
         }
 }
 else {
-            
+    
+    // TODO:: use prepared staetment
     $query = "SELECT personal_info.*, medical_record.*
     FROM personal_info
     INNER JOIN medical_record ON personal_info.id = medical_record.id
