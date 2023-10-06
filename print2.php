@@ -28,7 +28,7 @@ include "functions.php";
 
 if (isset($_GET['view_history_id'])) {
     $view_history_id = $_GET['view_history_id'];
-
+    // TODO:: use prepared statement
     $query = "SELECT personal_info.*, medical_record.*
 FROM personal_info
 INNER JOIN medical_record ON personal_info.id = medical_record.id

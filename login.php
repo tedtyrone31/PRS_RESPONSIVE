@@ -16,6 +16,7 @@ if (isset($_POST['login_btn'])) {
     $error_message = [];
 
     if (!empty($username) && !empty($password)) {
+        // TODO:: use prepared statement
         $query = "SELECT * FROM admin WHERE username = '$username' limit 1";
         $result = mysqli_query($connection,$query);
         if ($result && mysqli_num_rows($result) > 0) {

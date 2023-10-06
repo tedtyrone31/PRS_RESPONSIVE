@@ -383,6 +383,7 @@ $total_no_of_pages = ceil($total_records / $total_records_per_page);
                                             <button class="c_btn_type01 c_btn_add_record_btn" name="add_record_btn">Save</button>
                                         </form>
                                         <?php 
+                                        // TODO:: wtf is this shit! DRY??
                                     if (isset($_POST['add_record_btn'])) {
                                         $firstName = $_POST['firstName'];
                                         $lastName = $_POST['lastName'];
